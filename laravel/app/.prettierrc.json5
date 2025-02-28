@@ -1,0 +1,14 @@
+{
+  // List of plugins to use with Prettier
+  "plugins": ["@prettier/plugin-php"],
+
+  "semi": false, // js
+
+  "singleQuote": false, 
+  "trailingComma": "all", // Always add trailing commas where valid
+  "trailingCommaPHP": true,
+
+  "phpVersion": "8.2", // 8.4 not supported yet
+  "printWidth": 120,
+  "braceStyle": "1tbs",
+}
