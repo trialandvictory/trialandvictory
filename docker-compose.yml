@@ -5,6 +5,8 @@ services:
     container_name: laravel_app
     restart: unless-stopped
     working_dir: /var/www
+    env_file:
+      - .env
     volumes:
       - ./laravel/app:/var/www
       - ./laravel/entrypoint.sh:/opt/entrypoint.sh
