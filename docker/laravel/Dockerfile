@@ -6,7 +6,7 @@ RUN apt update && \
 RUN install-php-extensions pcntl
 
 # copy required for dependency installs, app is mounted later as well
-COPY app /var/www
+COPY laravel /var/www
 
 ARG USER=laravel
 # https://frankenphp.dev/docs/docker/#running-as-a-non-root-user

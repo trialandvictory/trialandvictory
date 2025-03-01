@@ -1,14 +1,14 @@
 services:
   laravel:
     build:
-      context: laravel
-      dockerfile: laravel.Dockerfile
+      context: .
+      dockerfile: docker/laravel/Dockerfile
     container_name: laravel_app
     restart: unless-stopped
     
     volumes:
-      - ./laravel/app:/var/www
-      - ./laravel/entrypoint.sh:/opt/entrypoint.sh
+      - ./laravel:/var/www
+      - ./docker/laravel/entrypoint.sh:/opt/entrypoint.sh
       # named volumes exist outside of this folder:
       - vendor:/var/www/vendor
     command: /bin/bash /opt/entrypoint.sh
@@ -26,15 +26,15 @@ services:
 
   bun:
     build:
-      context: laravel
-      dockerfile: bun.Dockerfile
+      context: .
+      dockerfile: docker/bun/Dockerfile
     container_name: bundler
     command: ["/bin/bash", "/opt/entrypoint.sh"]
     working_dir: /var/www
     restart: no
     volumes:
-        - ./laravel/app:/var/www
-        - ./bun/entrypoint.sh:/opt/entrypoint.sh
+        - ./laravel:/var/www
+        - ./docker/bun/entrypoint.sh:/opt/entrypoint.sh
         # named volumes exist outside of this folder:
         - node_modules:/var/www/node_modules
     env_file:
