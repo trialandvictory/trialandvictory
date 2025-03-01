@@ -12,14 +12,19 @@ usermod -aG laravel $USER # <- voeg jezelf toe aan die groep
 ```
 
 Hierna moet je opnieuw opstarten/inloggen om de groepsverandering actief te maken.
+Als iets zeurt over rechten kun je dat hierna fixen met:
+```bash
+sudo chown -R laravel:laravel ./laravel
+sudo chmod -R 770 ./laravel
+```
 
 ## Static Files
-Deze repo bevat SCSS en Typescript support met Vite.
-Standaard worden deze files gebundled voordat Laravel gestart wordt (zie `entrypoint.sh`).
-Voor lokale development kun je in de `laravel/app` folder `bun dev` uitvoeren en dan zal de frontend live bijwerken.
+Deze repo bevat SCSS en TypeScript support met Vite.
+Standaard worden deze files gebundeld voordat Laravel gestart wordt (zie `docker/bun/entrypoint.sh`).
 
-> Todo: bun in een eigen container gooien zodat die niet lokaal geinstalleerd hoeft te zijn.
-> In dev-omgeving kan die dan hot blijven draaien en in productie release bundle maken en exit.
+Bun draait nu in een aparte container en wordt automatisch gestart via Docker.
+- In **development** (`APP_ENV=local`) blijft `bun run dev` draaien voor live-updates.
+- In **production** (`APP_ENV=production`) wordt `bun run build` uitgevoerd en stopt de container daarna automatisch.
 
 ## Nieuwe Laravel App Maken:
 ```bash
