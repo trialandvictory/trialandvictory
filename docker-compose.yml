@@ -2,12 +2,15 @@ services:
   laravel:
     build:
       context: laravel
+      dockerfile: laravel.Dockerfile
     container_name: laravel_app
     restart: unless-stopped
     
     volumes:
       - ./laravel/app:/var/www
       - ./laravel/entrypoint.sh:/opt/entrypoint.sh
+      # named volumes exist outside of this folder:
+      - vendor:/var/www/vendor
     command: /bin/bash /opt/entrypoint.sh
     env_file:
       - .env
@@ -22,19 +25,27 @@ services:
             condition: service_healthy
 
   bun:
-    image: oven/bun:latest
+    build:
+      context: laravel
+      dockerfile: bun.Dockerfile
     container_name: bundler
-    command: /bin/bash /opt/entrypoint.sh
+    command: ["/bin/bash", "/opt/entrypoint.sh"]
     working_dir: /var/www
     restart: no
     volumes:
         - ./laravel/app:/var/www
         - ./bun/entrypoint.sh:/opt/entrypoint.sh
+        # named volumes exist outside of this folder:
+        - node_modules:/var/www/node_modules
     env_file:
       - .env
     healthcheck:
         test: ["CMD", "bash", "-c", "cat /opt/health/status | grep 'ready'"]
-        interval: 10s
+        interval: 1s
         timeout: 5s
-        retries: 3
-        start_period: 10s
+        retries: 15
+        start_period: 0s # no start period bc bun is fast
+
+volumes:
+  vendor:
+  node_modules:

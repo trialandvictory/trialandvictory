@@ -1,18 +1,17 @@
-#!/bin/bash
-set -e
+#!/bin/sh
 
-mkdir -p /opt/health
-echo "installing" > /opt/health/status
+set -e  # Exit immediately if a command exits with a non-zero status
 
-# bun install in the Dockerfile doesn't seem to work that well.
-# at least bun is fast so an install here shouldn't be a big problem:
-bun install
+echo "Starting Bun container..."
 
-echo "building" > /opt/health/status
-
-# todo: set node environment
-
-echo "ready" > /opt/health/status
-# todo: switch based on prd/dev environment
-# bun run build
-bun run dev
+if [ "$APP_ENV" = "production" ]; then
+    echo "Running in production mode..."
+    bun run build
+    echo "ready" > /opt/health/status
+    sleep 30  # Give Laravel time to start before the container exits
+else
+    echo "Running in development mode..."
+    echo "ready" > /opt/health/status
+    exec bun run dev  # Run bun in dev mode and keep the container alive
+    # exec passes ctrl-c better
+fi

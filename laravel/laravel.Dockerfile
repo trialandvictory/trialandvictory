@@ -26,7 +26,7 @@ RUN \
 
 WORKDIR /var/www
 
-RUN composer install
+RUN composer install --no-dev --optimize-autoloader
 
 RUN php artisan octane:install --server=frankenphp
 
