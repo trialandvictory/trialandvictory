@@ -5,10 +5,6 @@ RUN apt update && \
     apt install --no-install-recommends -y git unzip 7zip
 RUN install-php-extensions pcntl
 
-ENV BUN_INSTALL="/opt/bun"
-ENV PATH="$BUN_INSTALL/bin:$PATH"
-RUN curl -fsSL https://bun.sh/install | bash
-
 # copy required for dependency installs, app is mounted later as well
 COPY app /var/www
 
@@ -24,12 +20,13 @@ RUN \
     chown -R ${USER}:${USER} /config/caddy
     # chown -R ${USER}:${USER} /var/www && \
     # chmod -R 770 /var/www
+    # ↑ rights are now fixed in entrypoint.sh
 
-# USER ${USER} # <- user is switched in entrypoint.sh
+# USER ${USER} # ← user is now switched in entrypoint.sh
 
 WORKDIR /var/www
 
-RUN composer install && bun install
+RUN composer install
 
 RUN php artisan octane:install --server=frankenphp
 

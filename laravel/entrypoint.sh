@@ -7,7 +7,6 @@ chmod -R 770 .
 
 # now switch to laravel:
 su laravel sh -c "
-  bun run build &&
   php artisan migrate --force &&
   php artisan optimize &&
   php artisan config:cache &&

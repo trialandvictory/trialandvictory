@@ -4,17 +4,37 @@ services:
       context: laravel
     container_name: laravel_app
     restart: unless-stopped
-    working_dir: /var/www
-    env_file:
-      - .env
+    
     volumes:
       - ./laravel/app:/var/www
       - ./laravel/entrypoint.sh:/opt/entrypoint.sh
-    # command/entrypoint: see Dockerfile
     command: /bin/bash /opt/entrypoint.sh
+    env_file:
+      - .env
     environment:
-      SUPERVISOR_PHP_COMMAND: "/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan octane:start --server=frankenphp --host=0.0.0.0 --admin-port=2019 --port=8000" 
-      XDG_CONFIG_HOME:  /var/www/html/config 
-      XDG_DATA_HOME:  /var/www/html/data
+      SUPERVISOR_PHP_COMMAND: "/usr/bin/php -d variables_order=EGPCS /var/www/html/artisan octane:start --server=frankenphp --host=0.0.0.0 --admin-port=2019 --port=8000"
+      XDG_CONFIG_HOME: /var/www/html/config
+      XDG_DATA_HOME: /var/www/html/data
     ports:
       - "8000:8000"
+    depends_on:
+        bun:
+            condition: service_healthy
+
+  bun:
+    image: oven/bun:latest
+    container_name: bundler
+    command: /bin/bash /opt/entrypoint.sh
+    working_dir: /var/www
+    restart: no
+    volumes:
+        - ./laravel/app:/var/www
+        - ./bun/entrypoint.sh:/opt/entrypoint.sh
+    env_file:
+      - .env
+    healthcheck:
+        test: ["CMD", "bash", "-c", "cat /opt/health/status | grep 'ready'"]
+        interval: 10s
+        timeout: 5s
+        retries: 3
+        start_period: 10s
