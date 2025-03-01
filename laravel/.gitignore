@@ -22,3 +22,4 @@ yarn-error.log
 /.vscode
 /.zed
 html/config/caddy
+html/data/caddy
