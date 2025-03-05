@@ -1,7 +1,10 @@
-import "./bootstrap"
+// import "./bootstrap"
 
 function myfunc(it: string) {
-    console.log(typeof it)
+    console.log(it)
 }
 
-myfunc("456")
+myfunc("Hello World!")
+
+
+
