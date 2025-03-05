@@ -5,13 +5,14 @@
 Je kan dit zo op je eigen machine aanmaken:
 
 ```bash
-groupadd --gid 1050 laraver
+groupadd --gid 1050 laravel
 useradd --uid 1050 -g laravel laravel
 usermod -aG laravel $USER # <- voeg jezelf toe aan die groep
 # de naam 'laravel' mag je veranderen als de id 1050 maar gelijk blijft
 ```
 
-Hierna moet je opnieuw opstarten/inloggen om de groepsverandering actief te maken.
+**Hierna moet je opnieuw opstarten om de groepsverandering actief te maken.**
+
 Als iets zeurt over rechten kun je dat hierna fixen met:
 ```bash
 sudo chown -R laravel:laravel ./laravel
