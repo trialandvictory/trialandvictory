@@ -21,5 +21,4 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
-html/config/caddy
-html/data/caddy
+html/
