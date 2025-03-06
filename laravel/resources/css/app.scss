@@ -5,7 +5,6 @@
 
 @import "./theme.scss";
 
-
 // maybe should be removed:
 .text {
     max-width: 600px;
@@ -30,17 +29,21 @@
 
 .wheel {
     position: absolute;
-    width: 40px;  /* Slightly larger wheels */
+    width: 40px; /* Slightly larger wheels */
     height: 40px;
-    background: gray;  /* Changed wheel color to gray */
+    background: gray; /* Changed wheel color to gray */
     border-radius: 50%;
     bottom: 5px;
-    border: 5px solid black;  /* Added a black border to the wheel */
+    border: 5px solid black; /* Added a black border to the wheel */
     animation: spin 1s linear infinite;
 }
 
-.wheel.left { left: 25px; }
-.wheel.right { right: 25px; }
+.wheel.left {
+    left: 25px;
+}
+.wheel.right {
+    right: 25px;
+}
 /* Adding spokes to the wheels */
 .wheel::before,
 .wheel::after {
@@ -55,12 +58,24 @@
     transform: translate(-50%, -50%);
 }
 
-.wheel.left::before { transform: rotate(0deg); }
-.wheel.left::after { transform: rotate(90deg); }
+.wheel.left::before {
+    transform: rotate(0deg);
+}
+.wheel.left::after {
+    transform: rotate(90deg);
+}
 
-.wheel.right::before { transform: rotate(0deg); }
-.wheel.right::after { transform: rotate(90deg); }
+.wheel.right::before {
+    transform: rotate(0deg);
+}
+.wheel.right::after {
+    transform: rotate(90deg);
+}
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

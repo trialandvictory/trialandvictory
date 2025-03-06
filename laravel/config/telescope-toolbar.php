@@ -3,7 +3,6 @@
 use Laravel\Telescope\EntryType;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Telescope Toolbar Enabled
@@ -13,7 +12,7 @@ return [
     | enabled and Laravel needs to be in Debug mode.
     |
     */
-    'enabled' => env('TELESCOPE_TOOLBAR_ENABLED', env('TELESCOPE_ENABLED', true)),
+    "enabled" => env("TELESCOPE_TOOLBAR_ENABLED", env("TELESCOPE_ENABLED", true)),
 
     /*
     |--------------------------------------------------------------------------
@@ -24,7 +23,7 @@ return [
     | (AJAX) requests.
     |
     */
-    'replace' => env('TELESCOPE_TOOLBAR_REPLACE', true),
+    "replace" => env("TELESCOPE_TOOLBAR_REPLACE", true),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,7 +36,7 @@ return [
     | Values be: 'auto', true, or false (default)
     |
     */
-    'light_theme' => env('TELESCOPE_LIGHT_THEME', false),
+    "light_theme" => env("TELESCOPE_LIGHT_THEME", false),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +48,7 @@ return [
     | Values be: true, false
     |
     */
-    'new_tab' => env('TELESCOPE_TOOLBAR_NEW_TAB', false),
+    "new_tab" => env("TELESCOPE_TOOLBAR_NEW_TAB", false),
 
     /*
     |--------------------------------------------------------------------------
@@ -59,7 +58,7 @@ return [
     | The route path that is being used to collect the toolbar metrics.
     |
     */
-    'path' => '_tt',
+    "path" => "_tt",
 
     /*
      |--------------------------------------------------------------------------
@@ -70,13 +69,9 @@ return [
      | it will use the Telescope middleware.
      |
      */
-    'middleware' => [
-        'telescope'
-    ],
+    "middleware" => ["telescope"],
 
-    'asset_middleware' => [
-        'web'
-    ],
+    "asset_middleware" => ["web"],
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +81,7 @@ return [
     | This Javascript RegExp excludes Ajax Requests from being collected.
     |
     */
-    'excluded_ajax_paths' => '^/_tt|^/_debugbar|^/horizon',
+    "excluded_ajax_paths" => "^/_tt|^/_debugbar|^/horizon",
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +91,7 @@ return [
     | This is a list of paths the toolbar will not run on.
     |
     */
-    'ignore_paths' => [
+    "ignore_paths" => [
         //
     ],
 
@@ -109,7 +104,7 @@ return [
     | them in in the Requests tab on the next 'real' response.
     |
     */
-    'store_redirects' => true,
+    "store_redirects" => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -120,7 +115,7 @@ return [
     | You can specify the number of seconds it listens or disable with `false`
     |
     */
-    'dump_watcher' => false,
+    "dump_watcher" => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -130,59 +125,28 @@ return [
     | This options configures which collectors are shown
     |
     */
-    'collectors' => [
+    "collectors" => [
         EntryType::REQUEST => [
-            'telescope-toolbar::collectors.request',
-            'telescope-toolbar::collectors.time',
-            'telescope-toolbar::collectors.memory',
-            'telescope-toolbar::collectors.session',
-            'telescope-toolbar::collectors.user',
+            "telescope-toolbar::collectors.request",
+            "telescope-toolbar::collectors.time",
+            "telescope-toolbar::collectors.memory",
+            "telescope-toolbar::collectors.session",
+            "telescope-toolbar::collectors.user",
         ],
-        EntryType::EXCEPTION => [
-            'telescope-toolbar::collectors.exceptions',
-        ],
-        EntryType::VIEW => [
-            'telescope-toolbar::collectors.views',
-        ],
-        EntryType::QUERY => [
-            'telescope-toolbar::collectors.queries',
-        ],
-        EntryType::CACHE => [
-            'telescope-toolbar::collectors.cache',
-        ],
-        EntryType::LOG => [
-            'telescope-toolbar::collectors.logs',
-        ],
-        EntryType::MAIL => [
-            'telescope-toolbar::collectors.mail',
-        ],
-        EntryType::NOTIFICATION => [
-            'telescope-toolbar::collectors.notifications',
-        ],
-        EntryType::GATE => [
-            'telescope-toolbar::collectors.gates',
-        ],
-        EntryType::JOB => [
-            'telescope-toolbar::collectors.jobs',
-        ],
-        EntryType::COMMAND => [
-            'telescope-toolbar::collectors.commands',
-        ],
-        EntryType::DUMP => [
-            'telescope-toolbar::collectors.dumps',
-        ],
-        EntryType::EVENT => [
-            'telescope-toolbar::collectors.events',
-        ],
-        EntryType::MODEL => [
-            'telescope-toolbar::collectors.models',
-        ],
-        EntryType::REDIS => [
-            'telescope-toolbar::collectors.redis',
-        ],
-        EntryType::SCHEDULED_TASK => [
-
-        ],
+        EntryType::EXCEPTION => ["telescope-toolbar::collectors.exceptions"],
+        EntryType::VIEW => ["telescope-toolbar::collectors.views"],
+        EntryType::QUERY => ["telescope-toolbar::collectors.queries"],
+        EntryType::CACHE => ["telescope-toolbar::collectors.cache"],
+        EntryType::LOG => ["telescope-toolbar::collectors.logs"],
+        EntryType::MAIL => ["telescope-toolbar::collectors.mail"],
+        EntryType::NOTIFICATION => ["telescope-toolbar::collectors.notifications"],
+        EntryType::GATE => ["telescope-toolbar::collectors.gates"],
+        EntryType::JOB => ["telescope-toolbar::collectors.jobs"],
+        EntryType::COMMAND => ["telescope-toolbar::collectors.commands"],
+        EntryType::DUMP => ["telescope-toolbar::collectors.dumps"],
+        EntryType::EVENT => ["telescope-toolbar::collectors.events"],
+        EntryType::MODEL => ["telescope-toolbar::collectors.models"],
+        EntryType::REDIS => ["telescope-toolbar::collectors.redis"],
+        EntryType::SCHEDULED_TASK => [],
     ],
-
 ];

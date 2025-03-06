@@ -5,6 +5,3 @@ function myfunc(it: string) {
 }
 
 myfunc("Hello World!")
-
-
-
