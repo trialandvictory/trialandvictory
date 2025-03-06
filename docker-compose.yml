@@ -17,7 +17,7 @@ services:
       XDG_CONFIG_HOME: /var/www/html/config
       XDG_DATA_HOME: /var/www/html/data
     ports:
-      - "8000:8000"
+      - "${APP_PORT:-8000}:8000"
     depends_on:
         bun:
             condition: service_healthy
@@ -34,7 +34,7 @@ services:
         - ./laravel:/var/www
         - ./docker/bun/entrypoint.sh:/opt/entrypoint.sh
     ports:
-      - "5173:5173"
+      - "${VITE_PORT:-5173}:5173"
     env_file:
       - .env
     healthcheck:
