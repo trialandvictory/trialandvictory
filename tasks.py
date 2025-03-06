@@ -31,9 +31,13 @@ def artisan(ctx: Context, args: str):
     """
     Run php artisan command in Docker.
     """
-    return ctx.run(
+    result = ctx.run(
         f"{DOCKER_COMPOSE} run --rm laravel php artisan {args}", hide=True, warn=True
-    ).stdout.strip()
+    )
+    if result.ok:
+        return result.stdout.strip()
+    else:
+        raise ValueError(result)
 
 @task(pre=[require_sudo])
 def setup_groups(c: Context, name = "laravel"):
