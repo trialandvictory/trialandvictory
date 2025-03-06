@@ -1,0 +1,5 @@
+[services]
+services = "discover"
+minimal = ["laravel"]
+log = ["laravel", "bun"]
+db = []
