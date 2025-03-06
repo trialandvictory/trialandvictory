@@ -3,7 +3,64 @@
 @source "../**/*.blade.php";
 @source "../**/*.js";
 
-// scss goes here:
-* {
-    background: blue;
+@import "./theme.scss";
+
+
+// maybe should be removed:
+.text {
+    max-width: 600px;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.car-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+    transition: transform 0.1s;
+}
+
+.car {
+    width: 100%;
+    display: block;
+}
+
+.wheel {
+    position: absolute;
+    width: 40px;  /* Slightly larger wheels */
+    height: 40px;
+    background: gray;  /* Changed wheel color to gray */
+    border-radius: 50%;
+    bottom: 5px;
+    border: 5px solid black;  /* Added a black border to the wheel */
+    animation: spin 1s linear infinite;
+}
+
+.wheel.left { left: 25px; }
+.wheel.right { right: 25px; }
+/* Adding spokes to the wheels */
+.wheel::before,
+.wheel::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: black;
+    top: 50%;
+    left: 50%;
+    transform-origin: top center;
+    transform: translate(-50%, -50%);
+}
+
+.wheel.left::before { transform: rotate(0deg); }
+.wheel.left::after { transform: rotate(90deg); }
+
+.wheel.right::before { transform: rotate(0deg); }
+.wheel.right::after { transform: rotate(90deg); }
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
