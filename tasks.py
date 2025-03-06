@@ -9,6 +9,7 @@ from pathlib import Path
 
 import edwh
 from edwh import DOCKER_COMPOSE
+from edwh.tasks import require_sudo
 from edwh import improved_task as task
 from edwh.__about__ import __version__ as EDWH_VERSION
 from invoke import Context
@@ -34,6 +35,30 @@ def artisan(ctx: Context, args: str):
         f"{DOCKER_COMPOSE} run --rm laravel php artisan {args}", hide=True, warn=True
     ).stdout.strip()
 
+@task(pre=[require_sudo])
+def setup_groups(c: Context, name = "laravel"):
+    c.sudo(f"groupadd --gid 1050 {name}")
+    c.sudo(f"useradd --uid 1050 -g {name} {name}")
+    c.sudo(f"usermod -aG {name} $USER")
+
+    print("Done setting up user/group 1050. You should probably reboot now.")
+
+@task()
+def check_groups(c: Context):
+    lines = c.run("grep 1050 /etc/group", hide=True, warn=True).stdout.strip()
+    if groupname := lines.split(":")[0]:
+        print(f"✓ Group 1050/{groupname} exists.")
+        return groupname
+    else:
+        print("× no group 1050. You should probably run `edwh local.setup-groups`")
+        return None
+
+@task()
+def fix_permissions(c: Context):
+    if group := check_groups(c):
+        c.sudo(f"chown -R {group}:{group} ./laravel")
+        c.sudo("chmod -R 770 ./laravel")
+        print(f"✓ Fixed permissions of ./laravel (for {group})")
 
 @task()
 def setup(ctx: Context):
@@ -361,3 +386,5 @@ def setup(ctx: Context):
         comment="Vite (dev) port",
         force_default=accept_defaults,
     )
+
+    fix_permissions(ctx)
