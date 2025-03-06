@@ -2,3 +2,5 @@
 .idea
 *.swp
 *.bak
+__pycache__/
+.toml
