@@ -26,8 +26,6 @@ RUN \
 
 WORKDIR /var/www
 
-RUN composer install --no-dev --optimize-autoloader
-
-RUN php artisan octane:install --server=frankenphp
+# composer install happens in entrypoint now
 
 # command: see docker-compose

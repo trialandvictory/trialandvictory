@@ -2,6 +2,8 @@
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
+bun install --production
+
 echo "Starting Bun container..."
 
 if [ "$APP_ENV" = "production" ]; then
@@ -12,6 +14,6 @@ if [ "$APP_ENV" = "production" ]; then
 else
     echo "Running in development mode..."
     echo "ready" > /opt/health/status
-    exec bun run dev  # Run bun in dev mode and keep the container alive
+    exec bun run dev --host 0.0.0.0 --port 5173  # Run bun in dev mode and keep the container alive
     # exec passes ctrl-c better
 fi

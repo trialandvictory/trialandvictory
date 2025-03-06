@@ -1,10 +1,11 @@
 FROM oven/bun:latest
 
-RUN mkdir /opt/health
+RUN mkdir /opt/health && mkdir /opt/node_modules
 
-COPY laravel /var/www
 WORKDIR /var/www
 
-RUN bun install --production
+# RUN bun install --production
+# note: NODE_PATH doesn't seem to work, 
+# so bun install happens in entrypoint now.
 
 # command: see docker-compose
