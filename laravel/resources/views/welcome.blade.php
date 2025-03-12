@@ -27,9 +27,9 @@
                     inzicht te bieden en processen te optimaliseren. Zo haal je het maximale uit jouw data.</p>
             </header>
             <ul class="icons major">
-                <li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
                 <li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-                <li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+                <li><span class="icon solid fa-magic major style1"><span class="label">Dolor</span></span></li>
+                <li><span class="icon solid fa-code major style3"><span class="label">Lorem</span></span></li>
             </ul>
         </div>
     </section>
@@ -37,7 +37,7 @@
     <!-- Two -->
     <section id="two" class="wrapper alt style2">
         <section class="spotlight">
-            <div class="image"><img src="{{asset('images/pic01.jpg')}}" alt=""/></div>
+            <div class="image"><img src="{{asset('images/pic01.jpg')}}" class="soften rounded-left" alt=""/></div>
             <div class="content">
                 <h2>Wat maakt ons uniek</h2>
                 <p>Bij Trial & Victory combineren we technische expertise met creativiteit en een vleugje chaos (maar
@@ -52,108 +52,90 @@
                     uitdaging,
                     denken graag mee en zetten altijd die extra stap om iets écht unieks te bouwen.
                     <br/><br/>
-
+                </p>
                 <blockquote>“Als iets in één keer goed werkt, wantrouwen we het. Innovatie komt immers uit trial &
                     error… of in ons geval: Trial & Victory.”
                 </blockquote>
-                <blockquote>“Alsjeblieft... help...” ~ Robin van der Noord
-                </blockquote>
-                </p>
             </div>
         </section>
         <section class="spotlight section">
+            <div class="image"><img src="images/pic03.jpg" alt="" class="soften rounded-right"/></div>
+
             <div class="content">
                 <h2 class="text">Wat maken we<br/></h2>
                 <div>
-                    <p>Bij Trial and Victory geloven we niet alleen in het bouwen van indrukwekkende websites, maar ook
-                        in het bouwen van iets heel anders: auto's! Deze passie voor techniek en creatie strekt zich
-                        verder dan alleen de digitale wereld. Naast het ontwikkelen van op maat gemaakte websites en
-                        dashboards, zijn we beide fervente liefhebbers van het bouwen van auto's. Het klinkt misschien
-                        als een onverwachte combinatie, maar voor ons is het een verlengstuk van onze creativiteit en
-                        technische vaardigheden.
+                    <p>
+                        <b>Een goede website is als een auto.</b> Alles moet soepel draaien, goed ontworpen zijn en perfect aansluiten op de behoeften van de gebruiker. Bij Trial and Victory bouwen we geen auto's, maar we begrijpen wel hoe belangrijk techniek, design en functionaliteit zijn – of het nu gaat om een krachtige motor of een snelle, gebruiksvriendelijke website.
 
-                        De tijd die we besteden aan het bouwen van auto’s is niet alleen een manier om onze technische
-                        vaardigheden te verbeteren, maar het helpt ons ook om buiten de gebaande paden te denken. We
-                        leren voortdurend nieuwe technieken en technologieën die ons zowel op professioneel als
-                        persoonlijk vlak ten goede komen. Het is een hobby die ons telkens weer motiveert en ons een
-                        gevoel van voldoening geeft, precies zoals het bouwen van een fantastische website dat doet.
+                        Net zoals bij het bouwen van een auto draait het bij webontwikkeling om het maken van slimme keuzes. Elke beslissing, van de structuur van een website tot de kleinste details in de gebruikerservaring, heeft invloed op het eindresultaat. Wij combineren creativiteit met technische expertise om op maat gemaakte websites en dashboards te ontwikkelen die niet alleen visueel aantrekkelijk zijn, maar ook efficiënt en gebruiksvriendelijk werken.
 
-                        Wat we graag willen delen met onze klanten, is dat Trial and Victory niet alleen een naam is die
-                        we voor onze webdiensten gebruiken. Het is ook een mindset die we in alles wat we doen
-                        toepassen, van webontwikkeling tot autotechniek. Als we ergens aan beginnen, doen we dat met
-                        vastberadenheid, oog voor detail en de wens om het beste resultaat te bereiken. Trial and
-                        Victory gaat niet alleen over succes behalen, het gaat ook over het leren van fouten en telkens
-                        weer verbeteren.
+                        Bij Trial and Victory geloven we in een aanpak van proberen, leren en verbeteren. Technologie staat nooit stil, en wij ook niet. We blijven nieuwe technieken verkennen en verfijnen om telkens weer betere digitale oplossingen te creëren. Dit proces van innovatie en optimalisatie is wat ons drijft – en wat ervoor zorgt dat onze klanten altijd kunnen rekenen op een product van hoge kwaliteit.
 
-                        Net zoals het bouwen van een op maat gemaakte website, draait het bij het bouwen van een auto om
-                        het nemen van de juiste keuzes op het juiste moment. Elke beslissing heeft invloed op het
-                        eindresultaat. Daarom zijn we trots op zowel onze auto’s als onze websites – ze weerspiegelen
-                        ons streven naar perfectie, innovatie en de passie die we in alles stoppen.
-
-                        Dus, of we nu werken aan een op maat gemaakte website of de motor van een auto afstemmen, Trial
-                        and Victory betekent voor ons altijd het leveren van kwaliteit, creativiteit en vakmanschap. Het
-                        is een avontuur dat we met plezier aangaan, zowel in de digitale wereld als op de weg.</p>
-                </div>
-                <div class="car-container" id="car">
-                    <img src="https://www.pngmart.com/files/23/Car-Emoji-PNG-Isolated-HD.png" class="car" alt="Car">
-                    <div class="wheel left"></div>
-                    <div class="wheel right"></div>
+                        Of het nu gaat om een krachtige website die perfect presteert of een dashboard dat soepel functioneert: bij Trial and Victory staat vakmanschap, precisie en passie altijd voorop.
+                    </p>
                 </div>
             </div>
         </section>
         <section class="spotlight">
-            <div class="image"><img src="images/pic03.jpg" alt=""/></div>
-            <div class="content">
-                <h2>Augue eleifend aliquet<br/>
-                    sed condimentum</h2>
-                <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla
-                    nullam aenean mi ligula.</p>
+            <div class="content" style="margin: auto">
+                <h2>Trial & Victory<br/>&mdash; Een krachtige samenwerking</h2>
+                <h3 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="https://trialandsuccess.nl/static/images/icon.png" class="logo-small" alt="Trial and Success"/>
+                    <i class="icon solid fa-plus" style="margin: 40px"></i>
+                    <img src="https://viczdevelopment.nl/images/logo/VicZ-logo-brand-RGB-full-colour.png" class="logo-small" alt="VicZ Development"/>
+                </h3>
+                <p>Trial & Victory is een samenwerking tussen
+                    Robin (<a href="https://trialandsuccess.nl" target="_blank">Trial and Success</a>) en
+                    Victor (<a href="https://viczdevelopment.nl" target="_blank">VicZ Development</a>).
+                    De naam weerspiegelt onze gedeelde aanpak: experimenteren, leren en overwinnen.</p>
+                <p>Robin’s 'Trial and Success' is gebaseerd op zijn leerproces: "Trial and Error". Door te experimenteren met nieuwe technieken ontdekt hij wat werkt en wat niet.
+                    Creativiteit en doorzettingsvermogen staan hierbij centraal.</p>
+                <p>Victory verwijst naar Victor en zijn passie voor ontwikkeling en innovatie. Samen vormen we een team dat obstakels overwint en creatieve oplossingen bedenkt.</p>
             </div>
+
         </section>
+
     </section>
 
     <!-- Three -->
     <section id="three" class="wrapper style3 special">
         <div class="inner">
             <header class="major">
-                <h2>Welke diensten bieden we aan </h2>
-                <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br/>
-                    fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+                <h2>Welke diensten bieden we aan</h2>
+                <p>Wij helpen je met maatwerkoplossingen voor websites, webshops, data-inzichten en meer.
+                    Ontdek onze diensten hieronder.</p>
             </header>
             <ul class="features">
-                <li class="icon fa-paper-plane">
-                    <h3>Arcu accumsan</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean
-                        ligula consequat consequat.</p>
+                <li class="icon brands fa-wordpress">
+                    <h3>WordPress & WooCommerce</h3>
+                    <p>Professionele websites en webshops op maat, volledig geoptimaliseerd voor snelheid en gebruiksgemak.</p>
                 </li>
-                <li class="icon solid fa-laptop">
-                    <h3>Ac Augue Eget</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean
-                        ligula consequat consequat.</p>
+                <li class="icon solid fa-chart-line">
+                    <h3>Dashboarding</h3>
+                    <p>Datavisualisatie en inzichten met op maat gemaakte dashboards voor betere beslissingen.</p>
                 </li>
                 <li class="icon solid fa-code">
-                    <h3>Mus Scelerisque</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean
-                        ligula consequat consequat.</p>
+                    <h3>Custom webapplicaties</h3>
+                    <p>Op maat gemaakte webapplicaties die aansluiten op jouw unieke bedrijfsprocessen.</p>
                 </li>
-                <li class="icon solid fa-headphones-alt">
-                    <h3>Mauris Imperdiet</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean
-                        ligula consequat consequat.</p>
+                <li class="icon solid fa-server">
+                    <h3>Hosting</h3>
+                    <p>Betrouwbare en snelle hostingoplossingen met maximale uptime en beveiliging.</p>
                 </li>
-                <li class="icon fa-heart">
-                    <h3>Aenean Primis</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean
-                        ligula consequat consequat.</p>
+                <li class="icon solid fa-tools">
+                    <h3>Service & onderhoud</h3>
+                    <p>Regelmatige updates, monitoring en technische support voor zorgeloos beheer.</p>
                 </li>
-                <li class="icon fa-flag">
-                    <h3>Tortor Ut</h3>
-                    <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean
-                        ligula consequat consequat.</p>
+                <li class="icon solid fa-plus-circle">
+                    <h3>Overige diensten</h3>
+                    <p>Heb je een specifiek verzoek? Neem contact op en ontdek wat we voor je kunnen betekenen!</p>
                 </li>
             </ul>
+
+            <a href="{{route('services')}}" class="button icon solid fa-arrow-right">Bekijk het Volledige Aanbod</a>
         </div>
     </section>
+
 
     <!-- CTA -->
     <section id="cta" class="wrapper style4">

@@ -5,6 +5,8 @@
 
 @import "./theme.scss";
 
+html { scroll-behavior: smooth; }
+
 // maybe should be removed:
 .text {
     max-width: 600px;
@@ -12,70 +14,42 @@
     line-height: 1.6;
 }
 
-.car-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-50%);
-    width: 150px;
-    height: auto;
-    transition: transform 0.1s;
+img.soften {
+    mix-blend-mode: color-dodge;
 }
 
-.car {
-    width: 100%;
-    display: block;
+img.logo-small {
+    height: 100px;
 }
 
-.wheel {
-    position: absolute;
-    width: 40px; /* Slightly larger wheels */
-    height: 40px;
-    background: gray; /* Changed wheel color to gray */
-    border-radius: 50%;
-    bottom: 5px;
-    border: 5px solid black; /* Added a black border to the wheel */
-    animation: spin 1s linear infinite;
+.rounded-1 {
+    border-radius: 30px;
 }
 
-.wheel.left {
-    left: 25px;
-}
-.wheel.right {
-    right: 25px;
-}
-/* Adding spokes to the wheels */
-.wheel::before,
-.wheel::after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background: black;
-    top: 50%;
-    left: 50%;
-    transform-origin: top center;
-    transform: translate(-50%, -50%);
+.rounded-2 {
+    border-radius: 25% 10%;
 }
 
-.wheel.left::before {
-    transform: rotate(0deg);
-}
-.wheel.left::after {
-    transform: rotate(90deg);
+.rounded-3 {
+    border-radius: 10% 30% 50% 70%;
 }
 
-.wheel.right::before {
-    transform: rotate(0deg);
+.rounded-4 {
+    border-radius: 10% / 50%;
 }
-.wheel.right::after {
-    transform: rotate(90deg);
+
+.rounded-5 {
+    border-radius: 10px 100px / 120px;
 }
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+
+.rounded-6 {
+    border-radius: 50% 20% / 10% 40%;
+}
+
+.rounded-right {
+    border-radius: 180px 0 0 180px !important;
+}
+
+.rounded-left {
+    border-radius: 0 180px 180px 0 !important;
 }

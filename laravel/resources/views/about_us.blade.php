@@ -24,20 +24,27 @@
 <!-- Two -->
 <section id="two" class="wrapper alt style2">
     <section class="spotlight">
+        <div class="image"><img src="images/pic03.jpg" alt=""/></div>
+        <div class="content">
+            <h2>Trial & Victory team</h2>
+            <p>Stukje over ons samen, waarom we zo goed  samenwerken en seo </p>
+        </div>
+    </section>
+    <section class="spotlight section">
+        <div class="content">
+            <h2 class="text">Victor<br/></h2>
+            <div>
+                <p>Stukje over victor SEO enzo</p>
+            </div>
+        </div>
+        <div class="image"><img src="images/pic01.jpg" alt=""/></div>
+
+    </section>
+    <section class="spotlight">
         <div class="image"><img src="images/pic01.jpg" alt=""/></div>
         <div class="content">
-            <h2>Wat maakt ons uniek</h2>
-            <p>Bij Trial & Victory combineren we technische expertise met creativiteit en een vleugje chaos (maar
-                dan wel goed georganiseerde chaos). Met een achtergrond in Informatiekunde begrijpen we complexe
-                data als geen ander en vertalen we dit naar slimme websites en op maat gemaakte dashboards. Of je nu
-                een geoptimaliseerde WordPress-site nodig hebt of een geavanceerde webapplicatie met data-analyse,
-                wij zorgen voor de perfecte oplossing.
-                <br/> <br/>
-
-                Wat ons drijft? Koffie overdag, Wodka overdag, Frituur overdag, en een gezonde
-                obsessie met CHINEES pixel-perfect design en soepele gebruikerservaringen. We houden van een
-                uitdaging,
-                denken graag mee en zetten altijd die extra stap om iets écht unieks te bouwen.
+            <h2>Robin</h2>
+            <p>Stukje over Robin SEO enzo
                 <br/><br/>
 
             <blockquote>“Als iets in één keer goed werkt, wantrouwen we het. Innovatie komt immers uit trial &
@@ -48,55 +55,7 @@
             </p>
         </div>
     </section>
-    <section class="spotlight section">
-        <div class="content">
-            <h2 class="text">Wat maken we<br/></h2>
-            <div>
-                <p>Bij Trial and Victory geloven we niet alleen in het bouwen van indrukwekkende websites, maar ook
-                    in het bouwen van iets heel anders: auto's! Deze passie voor techniek en creatie strekt zich
-                    verder dan alleen de digitale wereld. Naast het ontwikkelen van op maat gemaakte websites en
-                    dashboards, zijn we beide fervente liefhebbers van het bouwen van auto's. Het klinkt misschien
-                    als een onverwachte combinatie, maar voor ons is het een verlengstuk van onze creativiteit en
-                    technische vaardigheden.
 
-                    De tijd die we besteden aan het bouwen van auto’s is niet alleen een manier om onze technische
-                    vaardigheden te verbeteren, maar het helpt ons ook om buiten de gebaande paden te denken. We
-                    leren voortdurend nieuwe technieken en technologieën die ons zowel op professioneel als
-                    persoonlijk vlak ten goede komen. Het is een hobby die ons telkens weer motiveert en ons een
-                    gevoel van voldoening geeft, precies zoals het bouwen van een fantastische website dat doet.
-
-                    Wat we graag willen delen met onze klanten, is dat Trial and Victory niet alleen een naam is die
-                    we voor onze webdiensten gebruiken. Het is ook een mindset die we in alles wat we doen
-                    toepassen, van webontwikkeling tot autotechniek. Als we ergens aan beginnen, doen we dat met
-                    vastberadenheid, oog voor detail en de wens om het beste resultaat te bereiken. Trial and
-                    Victory gaat niet alleen over succes behalen, het gaat ook over het leren van fouten en telkens
-                    weer verbeteren.
-
-                    Net zoals het bouwen van een op maat gemaakte website, draait het bij het bouwen van een auto om
-                    het nemen van de juiste keuzes op het juiste moment. Elke beslissing heeft invloed op het
-                    eindresultaat. Daarom zijn we trots op zowel onze auto’s als onze websites – ze weerspiegelen
-                    ons streven naar perfectie, innovatie en de passie die we in alles stoppen.
-
-                    Dus, of we nu werken aan een op maat gemaakte website of de motor van een auto afstemmen, Trial
-                    and Victory betekent voor ons altijd het leveren van kwaliteit, creativiteit en vakmanschap. Het
-                    is een avontuur dat we met plezier aangaan, zowel in de digitale wereld als op de weg.</p>
-            </div>
-            <div class="car-container" id="car">
-                <img src="https://www.pngmart.com/files/23/Car-Emoji-PNG-Isolated-HD.png" class="car" alt="Car">
-                <div class="wheel left"></div>
-                <div class="wheel right"></div>
-            </div>
-        </div>
-    </section>
-    <section class="spotlight">
-        <div class="image"><img src="images/pic03.jpg" alt=""/></div>
-        <div class="content">
-            <h2>Augue eleifend aliquet<br/>
-                sed condimentum</h2>
-            <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla
-                nullam aenean mi ligula.</p>
-        </div>
-    </section>
 </section>
 
 <!-- Three -->

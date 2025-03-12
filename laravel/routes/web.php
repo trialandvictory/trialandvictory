@@ -1,13 +1,18 @@
 <?php
 
+use App\Http\Middleware\ExcludeInProduction;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 
 Route::controller(PageController::class)->group(function () {
     Route::get("/", "index")->name("index");
-    Route::get("/about-us", "about_us")->name("about_us");
-    // fixme: add the following pages: Wat doen we / Tarieven / Portfolio / Contact
-
+    Route::get("/over-ons", "about_us")->name("about_us");
+    Route::get("/diensten", "services")->name("services"); # Wat doen we
+    Route::get("/prijzen", "pricing")->name("pricing"); # Tarieven
+    Route::get("/portfolio", "portfolio")->name("portfolio"); # Portfolio
+    Route::get("/contact", "contact")->name("contact"); # Contact
     // fixme: middleware voor local-only proberen:
-    Route::get("/elements", "elements")->name("elements");
+    Route::get("/elements", "elements")->name("elements")->middleware(ExcludeInProduction::class);
+    Route::get("/generic", "generic")->name("generic")->middleware(ExcludeInProduction::class);
 });
+
