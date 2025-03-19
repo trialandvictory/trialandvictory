@@ -174,14 +174,14 @@ return [
 
     "watch" => [
         "app",
-        "bootstrap",
-        "config/**/*.php",
-        "database/**/*.php",
-        "public/**/*.php",
-        "resources/**/*.php",
-        "routes",
-        "composer.lock",
-        ".env",
+//        "bootstrap",
+//        "config/**/*.php",
+//        "database/**/*.php",
+//        "public/**/*.php",
+//        "resources/**/*.php",
+//        "routes",
+//        "composer.lock",
+//        ".env",
     ],
 
     /*

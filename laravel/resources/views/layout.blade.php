@@ -29,7 +29,7 @@
     <header id="header"
             @if (Route::current()->getName() == "index")
                 class="alt"
-        @endif
+            @endif
     >
         <h1><a href="{{route('index')}}">Trial & Victory</a></h1>
         <nav id="nav">
@@ -81,5 +81,6 @@
 <script src="{{asset('js/breakpoints.min.js')}}"></script>
 <script src="{{asset('js/util.js')}}"></script>
 <script src="{{asset('js/theme.js')}}"></script>
+@yield("custom_js")
 </body>
 </html>

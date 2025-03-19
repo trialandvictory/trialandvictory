@@ -11,6 +11,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get("/prijzen", "pricing")->name("pricing"); # Tarieven
     Route::get("/portfolio", "portfolio")->name("portfolio"); # Portfolio
     Route::get("/contact", "contact")->name("contact"); # Contact
+    Route::post("/contact_send", "contact_send")->name("contact_send"); # Contact Versturen
     // fixme: middleware voor local-only proberen:
     Route::get("/elements", "elements")->name("elements")->middleware(ExcludeInProduction::class);
     Route::get("/generic", "generic")->name("generic")->middleware(ExcludeInProduction::class);

@@ -4,7 +4,9 @@
         .service-image img {
             width: 100%;
             height: auto;
+            aspect-ratio: 1;
             object-fit: cover;
+            border-radius: 16px;
         }
 
         inner {
@@ -26,6 +28,10 @@
 
         .icons.major li {
             margin: 0 10px; /* Add some spacing between the icons */
+        }
+
+        section {
+            background: linear-gradient(45deg, #5f6d7e, transparent);
         }
     </style>
 @endsection
@@ -107,7 +113,7 @@
                             schermen efficiënt werkt, zodat jij het beheer eenvoudig kunt uitvoeren.</i>
                     </div>
                     <div class="col-5 service-image">
-                        <img src="{{asset('images/pic03.jpg')}}" alt=""/>
+                        <img src="{{asset('images/pic04.jpg')}}" alt=""/>
                     </div>
                 </div>
 
@@ -146,13 +152,13 @@
                             call-to-actions en een contactformulier.</i>
                     </div>
                     <div class="col-5 service-image">
-                        <img src="{{asset('images/pic03.jpg')}}" alt=""/>
+                        <img src="{{asset('images/pic05.jpg')}}" alt=""/>
                     </div>
                 </div>
                 <hr/>
                 <div class="row">
                     <div class="col-5 service-image">
-                        <img src="{{asset('images/pic03.jpg')}}" alt=""/>
+                        <img src="{{asset('images/pic06.jpg')}}" alt=""/>
                     </div>
                     <div class="col-7">
                         <h4>Hosting en onderhoud</h4>
@@ -176,7 +182,7 @@
         <section class="wrapper style2">
             <div class="inner">
                 <header class="major">
-                    <h2>Heb je een specifieke vraag of wil je meer informatie over onze diensten?</h2>
+                    <h2>Heb je een specifieke vraag, wil je meer informatie over onze diensten of heb je zin in een bakkie koffie?</h2>
                     <p>Neem gerust contact met ons op, we helpen je graag verder!</p>
                 </header>
                 <ul class="icons major">

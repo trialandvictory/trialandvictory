@@ -76,18 +76,4 @@
             },
         })
     }
-    window.addEventListener("scroll", function () {
-        let car = document.getElementById("car")
-        let scrollPos = window.scrollY
-        let section = document.querySelector(".section")
-
-        // Move the car as you scroll through the section
-        let sectionTop = section.offsetTop
-        let sectionHeight = section.offsetHeight
-        let carMovement = (scrollPos - sectionTop) * 0.2
-
-        if (scrollPos >= sectionTop && scrollPos <= sectionTop + sectionHeight) {
-            car.style.transform = `translateY(${carMovement}px)`
-        }
-    })
 })(jQuery)
