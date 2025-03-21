@@ -1,5 +1,13 @@
 @extends('layout')
 
+@section('custom_css')
+    <style>
+        .text-danger {
+            color: red;
+        }
+    </style>
+@endsection
+
 @section('content')
     <!-- Main -->
     <article id="main">
@@ -20,7 +28,7 @@
                 <section>
 
                     <h4>Contactformulier</h4>
-                    <form method="post" action="{"{route('contact_send')}}">
+                    <form method="post" action="{{route('contact_send')}}">
                         @csrf
                         <div class="row gtr-uniform">
                             @if(session('success'))
@@ -48,7 +56,7 @@
                             </div>
 
                             <div class="col-12">
-                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message"
+                                <textarea name="message" id="message" placeholder="Enter your message"
                                           rows="6"></textarea>
                                 @error('message')
                                 <div class="text-danger">{{ $message }}</div>

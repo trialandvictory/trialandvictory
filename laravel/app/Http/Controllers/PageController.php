@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\contactMail;
 use Illuminate\Http\Request;
+use Mail;
 
 class PageController extends Controller
 {
@@ -51,6 +53,9 @@ class PageController extends Controller
             'message.string' => 'Het bericht moet tekst bevatten.',
         ]);
         #ToDo: Maybe send a mail?!?
+        $adminEmail = "contact@trialandvictory.com";
+        Mail::to($adminEmail)->send(new ContactMail($request->all()));
+
         return redirect()->back()->with('success', 'Je bericht is succesvol verzonden!');
     }
 
